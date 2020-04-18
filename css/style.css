@@ -1,0 +1,45 @@
+
+body{ /*este selector va a aplicar a todo el body*/
+	font-family: 'Lato', sans-serif;
+
+}
+
+/**Globales**/
+
+.contenedor{
+	max-width: 1200px; /*centrar contenido*/
+	margin: 0 auto;
+}
+
+/*Header*/
+.site-header.inicio{ /*Para darle a ambas clases el mismo estilo, se coloca de la manera mostrada*/
+	background: url(../imagenes/header.jpg); /*Para agregar imagen de fondo*/
+	background-repeat: no-repeat; /*No repetición de la imagen*/ 
+	background-position: center center; 
+	background-size: cover; /*se muestra completa la imagen*/
+	height: 100vh; /*Para que quede al tamaño justo de nuestra pantalla*/
+	min-height: 600px; /*para que vh mida minimo 600px y no daño el diseño*/	
+}	
+
+.barra{
+	display: flex;
+	justify-content: space-between; /*Alinear uno a la izq y otro hacia la derecha*/
+	padding-top: 30px; /*Espacio hacia dentro del elemento*/
+	align-items: center; /*Alinea verticalmente el logo como los enlaces*/
+}
+
+/*navegacion*/
+.navegacion a{
+	color:white;
+	text-decoration: none; /*Quitar decoracion al texto*/
+	font-size: 18px; /*Tamaño de la fuente*/
+	margin-right: 20px /*Separacion con el siguiente elemento*/
+}
+
+.navegacion a:hover{ /*cuandos ea subrayado se vuelva verde*/
+	color: #71B100;
+
+}
+.navegacion a:last-of-type{ /*seudo selectores para seleccionar el primer o ultimo elemento*/
+	margin:0;
+}
