@@ -59,6 +59,9 @@ h4{
 	display: block!important;
 }
 
+.contenido-centrado{ /*para centrar el contenido y que no sea dificil de visulizar*/
+	max-width: 800px;
+}
 
 /**BOTONES**/
 
@@ -83,6 +86,12 @@ h4{
 }
 
 /*Header*/
+
+.site-header{ /*paginas internas*/
+	background-color: #333333;
+	padding: 1rem 0 3rem 0;
+}
+
 .site-header.inicio{ /*Para darle a ambas clases el mismo estilo, se coloca de la manera mostrada*/
 	background: url(../imagenes/header.jpg); /*Para agregar imagen de fondo*/
 	background-repeat: no-repeat; /*No repetición de la imagen*/ 
@@ -151,12 +160,14 @@ h4{
 .contenedor-anuncios{
 	display:flex;
 	justify-content: space-between;
+	flex-wrap: wrap; /*pasarla a el padre para que se posiciones los elementos debajo*/
 }
 
 .anuncio{
-	flex-basis: calc(33.3% - 1rem); /*ancho de elementos*/
+	flex: 0 0 calc(33.3% - 1rem);
 	border: 1px solid #B5B5B5;
 	background-color: #F5F5F5;
+	margin-bottom: 2rem; /*separacion de los elementos*/
 
 }
 
@@ -179,6 +190,8 @@ h4{
 	padding: 0;
 	display: flex;
 	justify-content: space-around;
+	flex: 1;
+	max-width: 500px;
 }
 
 .iconos-caracteristicas li{
@@ -302,10 +315,10 @@ h4{
 	font-weight: 300;
 }
 
-
+/*FOOTER*/
 .site-footer {
 	background-color: #333333;
-	margin:0;
+	margin: 0;
 }
 
 .contenedor-footer{
@@ -319,3 +332,31 @@ h4{
 	color: #FFFFFF;	
 }
 
+/**INTERNAS**/
+/*Pagina Nosotros*/
+
+.contenido-nosotros{
+	display: grid; /*parecido a flexbox**/
+	grid-template-columns: 50% 50%; /*Aqui se define el layout*/	
+	grid-column-gap: 2rem; /*hacer la separacion entre los elementos*/
+}
+
+.texto-nosotros blockquote{
+	font-weight: 900;
+	font-size: 2rem;
+	margin: 0;
+	padding:  1rem 0 3rem 0 ;
+}
+
+/** Pagina anexa Anuncio**/
+.resumen-propiedad{
+	display: flex;
+	justify-content: space-between; /*horizontalmente alinea*/
+	align-items: center; /*alinea verticalmente*/
+}
+
+/** Pagina de Contacto Formulario**/
+
+label{
+	display: block; /*hacer que se tome todo el espacio disponible*/
+}
